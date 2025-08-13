@@ -21,6 +21,10 @@ map("n", "zg", "zg", { desc = "Add word to dictionary" })
 
 map("n", "zw", "zw", { desc = "Mark word as incorrect" })
 
+--UrlOpen
+map("n", "gx", "<cmd>URLOpenUnderCursor<cr>")
+
+>>>>>>> 808fa17 (feat: add plugins, mappings and so on for Neovim)
 map("n", "<leader>sen", function()
   vim.opt.spelllang = "en"
 end, { desc = "English spell check" })
@@ -37,18 +41,11 @@ map("n", "<leader>sall", function()
   vim.opt.spelllang = { "en", "uk", "ru" }
 end, { desc = "All languages spell check" })
 
--- Terminal
-map("n", "<C-\\>", function()
-  require("nvchad.term").toggle({ pos = "sp", size = 0.2 })
-end, { desc = "Toggle Terminal Horizontal" })
-
-map("t", "<C-\\>", function()
-  require("nvchad.term").toggle({ pos = "sp" })
-end, { desc = "Toggle Terminal Horizontal" })
 
 --Basic
 map("i", "jj", "<ESC>")
 map("n", "<leader><leader>", ":w<CR>")
+map("n", "<leader>q", ":qa<CR>")
 
 -- Obsidian keymaps
 -- Note: These will only work when obsidian.nvim is loaded (in markdown files)
@@ -140,3 +137,18 @@ end, { desc = "Test Summary" })
 map("n", "<leader>to", function()
   require("neotest").output.open({ enter = true })
 end, { desc = "Test Output" })
+
+-- The power of digits 1-9
+map("i", "<C-1>", "¹", { desc = "Insert superscript 1" })
+map("i", "<C-2>", "²", { desc = "Insert superscript 2" })
+map("i", "<C-3>", "³", { desc = "Insert superscript 3" })
+map("i", "<C-4>", "⁴", { desc = "Insert superscript 4" })
+map("i", "<C-5>", "⁵", { desc = "Insert superscript 5" })
+map("i", "<C-6>", "⁶", { desc = "Insert superscript 6" })
+map("i", "<C-7>", "⁷", { desc = "Insert superscript 7" })
+map("i", "<C-8>", "⁸", { desc = "Insert superscript 8" })
+
+map("n", "<leader>lt", ":LanguageToolCheck<CR>")
+map("n", "<leader>ls", ":LanguageToolSummary<CR>")
+map("n", "<leader>lc", ":LanguageToolClear<CR>")
+map("n", "<leader>lh", ":help LanguageTool<CR>")
