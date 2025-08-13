@@ -24,7 +24,6 @@ map("n", "zw", "zw", { desc = "Mark word as incorrect" })
 --UrlOpen
 map("n", "gx", "<cmd>URLOpenUnderCursor<cr>")
 
->>>>>>> 808fa17 (feat: add plugins, mappings and so on for Neovim)
 map("n", "<leader>sen", function()
   vim.opt.spelllang = "en"
 end, { desc = "English spell check" })
@@ -40,7 +39,6 @@ end, { desc = "Russian spell check" })
 map("n", "<leader>sall", function()
   vim.opt.spelllang = { "en", "uk", "ru" }
 end, { desc = "All languages spell check" })
-
 
 --Basic
 map("i", "jj", "<ESC>")
