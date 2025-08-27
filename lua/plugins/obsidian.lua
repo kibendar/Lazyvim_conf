@@ -23,6 +23,10 @@ return {
           name = "theory",
           path = "~/Obsidian/Theory_of_testing/",
         },
+        {
+          name = "daily",
+          path = "~/Obsidian/Daily Notes/",
+        },
       },
 
       attachments = {

@@ -42,8 +42,8 @@ end, { desc = "All languages spell check" })
 
 --Basic
 map("i", "jj", "<ESC>")
-map("n", "<leader><leader>", ":w<CR>")
-map("n", "<leader>q", ":qa<CR>")
+map("n", "<leader><leader>", "<CMD>w<CR>")
+map("n", "<leader>q", "<CMD>qa<CR>")
 
 -- Obsidian keymaps
 -- Note: These will only work when obsidian.nvim is loaded (in markdown files)
