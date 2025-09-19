@@ -13,6 +13,12 @@ return {
       -- Required.
       "nvim-lua/plenary.nvim",
     },
+    config = function(_, opts)
+      -- Set conceallevel for obsidian compatibility
+      vim.opt_local.conceallevel = 2
+
+      require("obsidian").setup(opts)
+    end,
     opts = {
       workspaces = {
         {
@@ -25,8 +31,22 @@ return {
         },
         {
           name = "daily",
-          path = "~/Obsidian/Daily Notes/",
+          path = "~/Obsidian/DailyTasks/",
         },
+        {
+          name = "templates",
+          path = "~/Obsidian/Templates/",
+        },
+        {
+          name = "summary",
+          path = "~/Obsidian/Summary/",
+        },
+      },
+
+      templates = {
+        folder = "~/Obsidian/Templates/",
+        date_format = "%Y-%m-%d-%a",
+        time_format = "%H:%M",
       },
 
       daily_notes = {
@@ -52,6 +72,9 @@ return {
           path = client:vault_relative_path(path) or path
           return string.format("![%s](%s)", path.name, path)
         end,
+      },
+      ui = {
+        enable = false,
       },
     },
   },

@@ -21,3 +21,5 @@ vim.opt.scrolljump = 5
 
 -- Optional: Set scroll offset (lines to keep visible above/below cursor)
 vim.opt.scrolloff = 8
+
+-- vim.opt.conceallevel = 2

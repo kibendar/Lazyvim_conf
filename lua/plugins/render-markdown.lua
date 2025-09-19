@@ -22,7 +22,7 @@ return {
         -- Render the bullet point before the checkbox.
         bullet = false,
         -- Padding to add to the right of checkboxes.
-        right_pad = 5,
+        right_pad = 0,
         unchecked = {
           -- Replaces '[ ]' of 'task_list_marker_unchecked'.
           icon = "󰄱 ",
@@ -48,7 +48,10 @@ return {
         -- | scope_highlight | optional highlight for item associated with custom checkbox |
         -- stylua: ignore
         custom = {
-          todo = { raw = '[-]', rendered = '󰥔 ', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
+          todo = { raw = '[-]', rendered = '󰥔', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
+          right_arrow = { raw = '[>]', rendered = '', highlight = 'RenderMarkdownRightArrow', scope_highlight = nil },
+          tilde = { raw = '[~]', rendered = '', highlight = 'RenderMarkdownTilde', scope_highlight = nil },
+          important = { raw = '[!]', rendered = '', highlight = 'RenderMarkdownImportant', scope_highlight = nil },
         },
       },
     },
