@@ -80,7 +80,7 @@ map("n", "<leader>om", "<cmd>ObsidianTomorrow<cr>", { desc = "Obsidian Tomorrow"
 -- Open yesterday's daily note
 map("n", "<leader>oy", "<cmd>ObsidianYesterday<cr>", { desc = "Obsidian Yesterday" })
 -- Create a new note from a template
-map("n", "<leader>oT", "<cmd>ObsidianTemplate<cr>", { desc = "Obsidian Template" })
+map("n", "<leader>ot", "<cmd>ObsidianTemplate<cr>", { desc = "Obsidian Template" })
 -- Paste an image from the clipboard
 map("n", "<leader>op", "<cmd>ObsidianPasteImg<cr>", { desc = "Obsidian Paste Image" })
 -- Rename the note of the current buffer or reference under the cursor
@@ -92,7 +92,7 @@ map("n", "<leader>oL", "<cmd>ObsidianLinkNew<cr>", { desc = "Obsidian Link New" 
 -- Extract the current selection into a new note and link to it
 map("v", "<leader>oe", "<cmd>ObsidianExtractNote<cr>", { desc = "Obsidian Extract Note" })
 -- Navigate to/from daily notes
-map("n", "<leader>otd", "<cmd>ObsidianDailies<cr>", { desc = "Obsidian Daily Notes" })
+map("n", "<leader>oTd", "<cmd>ObsidianDailies<cr>", { desc = "Obsidian Daily Notes" })
 -- Show all tags
 map("n", "<leader>ogt", "<cmd>ObsidianTags<cr>", { desc = "Obsidian Tags" })
 -- Workspace switcher (if you have multiple workspaces)
@@ -135,6 +135,11 @@ end, { desc = "Test Summary" })
 map("n", "<leader>to", function()
   require("neotest").output.open({ enter = true })
 end, { desc = "Test Output" })
+
+-- Paste image
+map("n", "<leader>p", function()
+  require("img-clip").paste_image()
+end, { desc = "Paste image from the clipboard" })
 
 -- The power of digits 1-9
 map("i", "<C-1>", "¹", { desc = "Insert superscript 1" })

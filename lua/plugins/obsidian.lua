@@ -26,6 +26,10 @@ return {
           path = "~/Obsidian/Ajax Studing/",
         },
         {
+          name = "home",
+          path = "~/Obsidian/Homework/",
+        },
+        {
           name = "theory",
           path = "~/Obsidian/Theory_of_testing/",
         },
