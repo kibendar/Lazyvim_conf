@@ -1,3 +1,3 @@
 # locale
 
-![locale](images/cat.png)
+![forest](assets/forest.png)
