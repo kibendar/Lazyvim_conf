@@ -22,4 +22,11 @@ vim.opt.scrolljump = 5
 -- Optional: Set scroll offset (lines to keep visible above/below cursor)
 vim.opt.scrolloff = 8
 
--- vim.opt.conceallevel = 2
+-- Define custom highlight groups
+-- In init.lua
+vim.api.nvim_set_hl(0, "CheckMark", { fg = "#1DCF17" })
+vim.api.nvim_set_hl(0, "CrossMark", { fg = "#E61A24" })
+
+-- Add matches that work in all buffers
+vim.fn.matchadd("CheckMark", "✔")
+vim.fn.matchadd("CrossMark", "✗")

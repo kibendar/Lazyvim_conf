@@ -22,7 +22,7 @@ map("n", "zg", "zg", { desc = "Add word to dictionary" })
 map("n", "zw", "zw", { desc = "Mark word as incorrect" })
 
 --UrlOpen
-map("n", "gx", "<cmd>URLOpenUnderCursor<cr>")
+map("n", "<leader>gx", "<cmd>URLOpenUnderCursor<cr>")
 
 map("n", "<leader>sen", function()
   vim.opt.spelllang = "en"

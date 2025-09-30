@@ -1,7 +1,7 @@
 return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" }, -- if you use the mini.nvim suite
     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
     ft = { "markdown" },
@@ -12,6 +12,10 @@ return {
       enabled = true,
       -- File types to render
       file_types = { "markdown" },
+      -- SOLUTION: Only render in normal mode, not in insert mode
+      anti_conceal = {
+        enabled = true, -- This helps show raw text in insert mode
+      },
       checkbox = {
         -- Checkboxes are a special instance of a 'list_item' that start with a 'shortcut_link'.
         -- There are two special states for unchecked & checked defined in the markdown grammar.
@@ -49,9 +53,9 @@ return {
         -- stylua: ignore
         custom = {
           todo = { raw = '[-]', rendered = '󰥔', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
-          right_arrow = { raw = '[>]', rendered = '', highlight = 'RenderMarkdownRightArrow', scope_highlight = nil },
-          tilde = { raw = '[~]', rendered = '', highlight = 'RenderMarkdownTilde', scope_highlight = nil },
-          important = { raw = '[!]', rendered = '', highlight = 'RenderMarkdownImportant', scope_highlight = nil },
+          right_arrow = { raw = '[>]', rendered = '', highlight = 'RenderMarkdownRightArrow', scope_highlight = nil },
+          tilde = { raw = '[~]', rendered = '', highlight = 'RenderMarkdownTilde', scope_highlight = nil },
+          important = { raw = '[!]', rendered = '', highlight = 'RenderMarkdownImportant', scope_highlight = nil },
         },
       },
     },
