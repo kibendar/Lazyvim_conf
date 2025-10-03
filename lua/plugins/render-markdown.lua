@@ -12,10 +12,23 @@ return {
       enabled = true,
       -- File types to render
       file_types = { "markdown" },
-      -- SOLUTION: Only render in normal mode, not in insert mode
-      anti_conceal = {
-        enabled = true, -- This helps show raw text in insert mode
+
+      quote = { repeat_linebreak = true },
+      win_options = {
+        showbreak = {
+          default = "",
+          rendered = "  ",
+        },
+        breakindent = {
+          default = false,
+          rendered = true,
+        },
+        breakindentopt = {
+          default = "",
+          rendered = "",
+        },
       },
+
       checkbox = {
         -- Checkboxes are a special instance of a 'list_item' that start with a 'shortcut_link'.
         -- There are two special states for unchecked & checked defined in the markdown grammar.
@@ -52,10 +65,10 @@ return {
         -- | scope_highlight | optional highlight for item associated with custom checkbox |
         -- stylua: ignore
         custom = {
-          todo = { raw = '[-]', rendered = '󰥔', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
-          right_arrow = { raw = '[>]', rendered = '', highlight = 'RenderMarkdownRightArrow', scope_highlight = nil },
-          tilde = { raw = '[~]', rendered = '', highlight = 'RenderMarkdownTilde', scope_highlight = nil },
-          important = { raw = '[!]', rendered = '', highlight = 'RenderMarkdownImportant', scope_highlight = nil },
+          todo = { raw = '[-]', rendered = '󰥔 ', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
+          right_arrow = { raw = '[>]', rendered = ' ', highlight = 'RenderMarkdownRightArrow', scope_highlight = nil },
+          tilde = { raw = '[~]', rendered = ' ', highlight = 'RenderMarkdownTilde', scope_highlight = nil },
+          important = { raw = '[!]', rendered = ' ', highlight = 'RenderMarkdownImportant', scope_highlight = nil },
         },
       },
     },
